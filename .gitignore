@@ -1,0 +1,17 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Python environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
