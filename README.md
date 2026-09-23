@@ -1,4 +1,4 @@
-# Breast Cancer Wisconsin Diagnostic (WDBC) - Analysis Pipeline
+# Beyond Aggregate Performance: Individual Prediction Stability Under Resampling in the Wisconsin Diagnostic Breast Cancer Dataset
 
 ## Overview
 Machine learning analysis pipeline for the Wisconsin Diagnostic Breast Cancer dataset.
