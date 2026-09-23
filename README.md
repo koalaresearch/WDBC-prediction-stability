@@ -1,6 +1,6 @@
 # Beyond Aggregate Performance: Individual Prediction Stability Under Resampling in WDBC
 
-> **Research question:** If we retrain the same model on slightly different samples, how much do its predictions for individual cases change, even when overall performance stays similar? **
+> **Research question:** If we retrain the same model on slightly different samples, how much do its predictions for individual cases change, even when overall performance stays similar?
 
 ## Overview
 
