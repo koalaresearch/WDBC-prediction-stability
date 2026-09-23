@@ -1,6 +1,9 @@
 # Beyond Aggregate Performance: Individual Prediction Stability Under Resampling in WDBC
 
-> **Research question:** When the same biomedical prediction procedure is redeveloped using slightly different training samples, does the same observation receive approximately the same predicted probability even when aggregate predictive performance remains stable?
+> **Research question:** If we retrain the same model on slightly different samples, how much do its predictions for individual cases change—even when overall performance stays similar?
+
+Formal protocol question:
+How stable are out-of-sample predicted probabilities for the same WDBC observations when the model is repeatedly redeveloped using different training samples, relative to aggregate predictive performance?
 
 ## Overview
 
