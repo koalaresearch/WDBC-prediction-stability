@@ -1,0 +1,3 @@
+procedure,n_full50_top57,n_ge_0_80,n_ge_0_90,proportion_ge_0_80,proportion_ge_0_90
+Logistic Regression,57,57,54,1.0,0.9473684210526315
+Random Forest,57,46,41,0.8070175438596491,0.7192982456140351
