@@ -1,0 +1,487 @@
+{
+  "run_all": "passed",
+  "code_cells_executed": 94,
+  "assert_statements": 148,
+  "unique_assert_statements": 129,
+  "primary_comparison": "byte-for-byte equality; no tolerance used",
+  "artifact_count": 29,
+  "artifacts": [
+    {
+      "path": "artifacts/diagnostics/logistic_regression_fit_diagnostics.csv",
+      "reference_path": "artifacts/diagnostics/logistic_regression_fit_diagnostics.csv",
+      "before_sha256": "e2640131c2c32a716c9c68aa46023a1a34718634ad08bd45d5b00c40cf2f9882",
+      "after_sha256": "e2640131c2c32a716c9c68aa46023a1a34718634ad08bd45d5b00c40cf2f9882",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/figures/aggregate_performance_stability.pdf",
+      "reference_path": "artifacts/figures/aggregate_performance_stability.pdf",
+      "before_sha256": "c3fa6c7816895723eed22972319f3992388e7ea914e13189c86a0b0aaa7af627",
+      "after_sha256": "543c71147dffaaa1539b3e7ca06ea8432a8b13de17b66a6c1649f3c3abc72799",
+      "identical_bytes": false,
+      "classification": "figure: regenerated",
+      "identical_excluding_date_metadata": true
+    },
+    {
+      "path": "artifacts/figures/aggregate_performance_stability.png",
+      "reference_path": "artifacts/figures/aggregate_performance_stability.png",
+      "before_sha256": "ee9ae11ffeeb8368e0a71b5cfbe9f192871ba047a09a440ddb0f0e7896d70d09",
+      "after_sha256": "ee9ae11ffeeb8368e0a71b5cfbe9f192871ba047a09a440ddb0f0e7896d70d09",
+      "identical_bytes": true,
+      "classification": "figure: regenerated"
+    },
+    {
+      "path": "artifacts/figures/cross_procedure_resampling_width.pdf",
+      "reference_path": "artifacts/figures/cross_procedure_resampling_width.pdf",
+      "before_sha256": "f0e99ed016c4cddfb49e1ccb5671b1a4ebee54dbfc6931ddeb4ef7371427b7f7",
+      "after_sha256": "0635cb148363cc0ea647e88daf05b0e50d816aeefb213d728a7c230a8c00ab05",
+      "identical_bytes": false,
+      "classification": "figure: regenerated",
+      "identical_excluding_date_metadata": true
+    },
+    {
+      "path": "artifacts/figures/cross_procedure_resampling_width.png",
+      "reference_path": "artifacts/figures/cross_procedure_resampling_width.png",
+      "before_sha256": "1b9a6ed4a2051c08851acd0b9050c4982eec8b69393ba05f74a6af8e92e1eada",
+      "after_sha256": "1b9a6ed4a2051c08851acd0b9050c4982eec8b69393ba05f74a6af8e92e1eada",
+      "identical_bytes": true,
+      "classification": "figure: regenerated"
+    },
+    {
+      "path": "artifacts/figures/experimental_design_stability_framework.pdf",
+      "reference_path": "artifacts/figures/experimental_design_stability_framework.pdf",
+      "before_sha256": "ec1ad9073625d50cb7c857633b6fe56e5d053cc2025f0db5a9443161769b416f",
+      "after_sha256": "7486d31242d99d63698c24a560ad99dfa814a0b8d241ea88927e19779d76dd0b",
+      "identical_bytes": false,
+      "classification": "figure: regenerated",
+      "identical_excluding_date_metadata": true
+    },
+    {
+      "path": "artifacts/figures/experimental_design_stability_framework.png",
+      "reference_path": "artifacts/figures/experimental_design_stability_framework.png",
+      "before_sha256": "49e1f37739e340c8feca598e93de33f3516672e7510d64a9050afcebea31892a",
+      "after_sha256": "49e1f37739e340c8feca598e93de33f3516672e7510d64a9050afcebea31892a",
+      "identical_bytes": true,
+      "classification": "figure: regenerated"
+    },
+    {
+      "path": "artifacts/figures/individual_prediction_stability.pdf",
+      "reference_path": "artifacts/figures/individual_prediction_stability.pdf",
+      "before_sha256": "df3d370f70b90af8fb18317ff141bceb7f94f98856436b671f71e585120c7ca4",
+      "after_sha256": "fbec4872fa5b11e17991776aef88f205dfdff96de64dd60123191722c9e6e5e3",
+      "identical_bytes": false,
+      "classification": "figure: regenerated",
+      "identical_excluding_date_metadata": true
+    },
+    {
+      "path": "artifacts/figures/individual_prediction_stability.png",
+      "reference_path": "artifacts/figures/individual_prediction_stability.png",
+      "before_sha256": "b6d78bb74f632d15fdbea392fd8b262edef6fb02c5988c6006f6ae86fa35e1cc",
+      "after_sha256": "b6d78bb74f632d15fdbea392fd8b262edef6fb02c5988c6006f6ae86fa35e1cc",
+      "identical_bytes": true,
+      "classification": "figure: regenerated"
+    },
+    {
+      "path": "artifacts/predictions/logistic_regression_oos_predictions.csv",
+      "reference_path": "artifacts/predictions/logistic_regression_oos_predictions.csv",
+      "before_sha256": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "after_sha256": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/predictions/prevalence_oos_predictions.csv",
+      "reference_path": "artifacts/predictions/prevalence_oos_predictions.csv",
+      "before_sha256": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "after_sha256": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/diagnostics/random_forest_fit_diagnostics.csv",
+      "reference_path": "artifacts/predictions/random_forest_fit_diagnostics.csv",
+      "before_sha256": "4c83a4aa56a63b019692e217bac1f9efd726abd1d92f1f83548e87ddc664b3eb",
+      "after_sha256": "05d5393782ee2f3bc184ce5c955cf970c0b1b6fcd9fbf02149e970396f2ab2c4",
+      "identical_bytes": false,
+      "classification": "runtime diagnostics: only fit_seconds may differ"
+    },
+    {
+      "path": "artifacts/diagnostics/random_forest_fit_diagnostics_deterministic.csv",
+      "reference_path": "artifacts/predictions/random_forest_fit_diagnostics_deterministic.csv",
+      "before_sha256": "7ab807d0f803fcc6ad905f530428849a657d8aefc25480ef62a4995b86636701",
+      "after_sha256": "7ab807d0f803fcc6ad905f530428849a657d8aefc25480ef62a4995b86636701",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/predictions/random_forest_oos_predictions.csv",
+      "reference_path": "artifacts/predictions/random_forest_oos_predictions.csv",
+      "before_sha256": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "after_sha256": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/aggregate_performance_stability_summary.csv",
+      "reference_path": "artifacts/results/aggregate_performance_stability_summary.csv",
+      "before_sha256": "49f36bc161a91719e397ea0eaeb5f775fa4b68e87844c345df3721a2c4d0b266",
+      "after_sha256": "49f36bc161a91719e397ea0eaeb5f775fa4b68e87844c345df3721a2c4d0b266",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/cross_procedure_individual_comparison.csv",
+      "reference_path": "artifacts/results/cross_procedure_individual_comparison.csv",
+      "before_sha256": "5be962a9d9a1f35b3e2a6d8255be12eb596c71de5e9012a1b1d10648643844d0",
+      "after_sha256": "5be962a9d9a1f35b3e2a6d8255be12eb596c71de5e9012a1b1d10648643844d0",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/logistic_regression_aggregate_metrics.csv",
+      "reference_path": "artifacts/results/logistic_regression_aggregate_metrics.csv",
+      "before_sha256": "4adc03bfb558a15ab5b00adf2ec6dbe5092b0215ad666b8f9b34c002e27bf6bd",
+      "after_sha256": "4adc03bfb558a15ab5b00adf2ec6dbe5092b0215ad666b8f9b34c002e27bf6bd",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/logistic_regression_individual_stability.csv",
+      "reference_path": "artifacts/results/logistic_regression_individual_stability.csv",
+      "before_sha256": "c9dcc649c6a58a9c2cf15e3d8cd93fe27dad930ae4d351d641832b8cdcb356fe",
+      "after_sha256": "c9dcc649c6a58a9c2cf15e3d8cd93fe27dad930ae4d351d641832b8cdcb356fe",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/main_results_table.csv",
+      "reference_path": "artifacts/results/main_results_table.csv",
+      "before_sha256": "c91dad5bf0295b033f236a01d9e71071822d20386a809dfeb383877a775696e8",
+      "after_sha256": "c91dad5bf0295b033f236a01d9e71071822d20386a809dfeb383877a775696e8",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/prevalence_individual_stability.csv",
+      "reference_path": "artifacts/results/prevalence_individual_stability.csv",
+      "before_sha256": "7402a990c351d69dba64b20316579a7ed6b2f945be6ba161f7ab3a0e9c00287e",
+      "after_sha256": "7402a990c351d69dba64b20316579a7ed6b2f945be6ba161f7ab3a0e9c00287e",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/quantile_method_membership_sensitivity.csv",
+      "reference_path": "artifacts/results/quantile_method_membership_sensitivity.csv",
+      "before_sha256": "7d310c73d9e8052113e6dbdb48b09d0801f10ade2d88d88dc49b4baab47d0e23",
+      "after_sha256": "7d310c73d9e8052113e6dbdb48b09d0801f10ade2d88d88dc49b4baab47d0e23",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/quantile_method_sensitivity.csv",
+      "reference_path": "artifacts/results/quantile_method_sensitivity.csv",
+      "before_sha256": "9903a29980adcab801562f4814086ebb93a06f570401e235ad280010feba79ab",
+      "after_sha256": "9903a29980adcab801562f4814086ebb93a06f570401e235ad280010feba79ab",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/random_forest_aggregate_metrics.csv",
+      "reference_path": "artifacts/results/random_forest_aggregate_metrics.csv",
+      "before_sha256": "bd6c2f8519bf343ff17df734ec36987dc36f0796140616be2be085e937f5a688",
+      "after_sha256": "bd6c2f8519bf343ff17df734ec36987dc36f0796140616be2be085e937f5a688",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/random_forest_individual_stability.csv",
+      "reference_path": "artifacts/results/random_forest_individual_stability.csv",
+      "before_sha256": "8e08a85d228db67547f197659c0daf4f0a7a7e3a2d498e05597a0b4b824bdeab",
+      "after_sha256": "8e08a85d228db67547f197659c0daf4f0a7a7e3a2d498e05597a0b4b824bdeab",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/upper_tail_membership_m40_summary.csv",
+      "reference_path": "artifacts/results/upper_tail_membership_m40_summary.csv",
+      "before_sha256": "de00067ee854f168764251f29e99bd90fe1fc61bd5a448526ba031a7aa913d17",
+      "after_sha256": "de00067ee854f168764251f29e99bd90fe1fc61bd5a448526ba031a7aa913d17",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/upper_tail_membership_stability_summary.csv",
+      "reference_path": "artifacts/results/upper_tail_membership_stability_summary.csv",
+      "before_sha256": "4c110c8b059ae0db4e4edb16b935579c23e6e2848323859609cd1b729f5ab2ea",
+      "after_sha256": "4c110c8b059ae0db4e4edb16b935579c23e6e2848323859609cd1b729f5ab2ea",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/upper_tail_robustness_summary.csv",
+      "reference_path": "artifacts/results/upper_tail_robustness_summary.csv",
+      "before_sha256": "2e9c025aa87ad1658e6acfb58909c1cdb674bb4ada580fbf7883cdbe37b51e2b",
+      "after_sha256": "2e9c025aa87ad1658e6acfb58909c1cdb674bb4ada580fbf7883cdbe37b51e2b",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/results/upper_tail_tie_audit_summary.csv",
+      "reference_path": "artifacts/results/upper_tail_tie_audit_summary.csv",
+      "before_sha256": "63946d9925ec8fec82419aa8d17247192997ebcfc2a3fe5613406519a892f1fd",
+      "after_sha256": "63946d9925ec8fec82419aa8d17247192997ebcfc2a3fe5613406519a892f1fd",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    },
+    {
+      "path": "artifacts/splits/resampling_manifest.csv",
+      "reference_path": "artifacts/splits/resampling_manifest.csv",
+      "before_sha256": "d2bd8ab9e86c1d05dd4291954f873f13553068bcf02271f7fb873bd35089d499",
+      "after_sha256": "d2bd8ab9e86c1d05dd4291954f873f13553068bcf02271f7fb873bd35089d499",
+      "identical_bytes": true,
+      "classification": "deterministic CSV: identical"
+    }
+  ],
+  "printed_output_matches_original_cells": [
+    14,
+    15,
+    29,
+    57,
+    72,
+    78,
+    83,
+    96,
+    97,
+    98,
+    108
+  ],
+  "checks": [
+    {
+      "object": "dataset_sha256",
+      "before": "be06e11b816f830afa615fe2296762d77eb9e29429b057484484931e7b06ff61",
+      "after": "be06e11b816f830afa615fe2296762d77eb9e29429b057484484931e7b06ff61",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/splits/resampling_manifest.csv",
+      "reference": "artifacts/splits/resampling_manifest.csv",
+      "before": "d2bd8ab9e86c1d05dd4291954f873f13553068bcf02271f7fb873bd35089d499",
+      "after": "d2bd8ab9e86c1d05dd4291954f873f13553068bcf02271f7fb873bd35089d499",
+      "identical": true
+    },
+    {
+      "object": "prevalence_predictions",
+      "reference": "artifacts/predictions/prevalence_oos_predictions.csv",
+      "before": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "after": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "identical": true
+    },
+    {
+      "object": "lr_predictions",
+      "reference": "artifacts/predictions/logistic_regression_oos_predictions.csv",
+      "before": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "after": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "identical": true
+    },
+    {
+      "object": "rf_predictions",
+      "reference": "artifacts/predictions/random_forest_oos_predictions.csv",
+      "before": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "after": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/predictions/random_forest_oos_predictions.csv",
+      "reference": "artifacts/predictions/random_forest_oos_predictions.csv",
+      "before": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "after": "7b3570fa69710f8e7bdf73031858e319b26992663a51cd5a92c367b864339420",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/diagnostics/random_forest_fit_diagnostics_deterministic.csv",
+      "reference": "artifacts/predictions/random_forest_fit_diagnostics_deterministic.csv",
+      "before": "7ab807d0f803fcc6ad905f530428849a657d8aefc25480ef62a4995b86636701",
+      "after": "7ab807d0f803fcc6ad905f530428849a657d8aefc25480ef62a4995b86636701",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/upper_tail_tie_audit_summary.csv",
+      "reference": "artifacts/results/upper_tail_tie_audit_summary.csv",
+      "before": "63946d9925ec8fec82419aa8d17247192997ebcfc2a3fe5613406519a892f1fd",
+      "after": "63946d9925ec8fec82419aa8d17247192997ebcfc2a3fe5613406519a892f1fd",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/upper_tail_membership_m40_summary.csv",
+      "reference": "artifacts/results/upper_tail_membership_m40_summary.csv",
+      "before": "de00067ee854f168764251f29e99bd90fe1fc61bd5a448526ba031a7aa913d17",
+      "after": "de00067ee854f168764251f29e99bd90fe1fc61bd5a448526ba031a7aa913d17",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/upper_tail_membership_stability_summary.csv",
+      "reference": "artifacts/results/upper_tail_membership_stability_summary.csv",
+      "before": "4c110c8b059ae0db4e4edb16b935579c23e6e2848323859609cd1b729f5ab2ea",
+      "after": "4c110c8b059ae0db4e4edb16b935579c23e6e2848323859609cd1b729f5ab2ea",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/upper_tail_robustness_summary.csv",
+      "reference": "artifacts/results/upper_tail_robustness_summary.csv",
+      "before": "2e9c025aa87ad1658e6acfb58909c1cdb674bb4ada580fbf7883cdbe37b51e2b",
+      "after": "2e9c025aa87ad1658e6acfb58909c1cdb674bb4ada580fbf7883cdbe37b51e2b",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/logistic_regression_aggregate_metrics.csv",
+      "reference": "artifacts/results/logistic_regression_aggregate_metrics.csv",
+      "before": "4adc03bfb558a15ab5b00adf2ec6dbe5092b0215ad666b8f9b34c002e27bf6bd",
+      "after": "4adc03bfb558a15ab5b00adf2ec6dbe5092b0215ad666b8f9b34c002e27bf6bd",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/random_forest_aggregate_metrics.csv",
+      "reference": "artifacts/results/random_forest_aggregate_metrics.csv",
+      "before": "bd6c2f8519bf343ff17df734ec36987dc36f0796140616be2be085e937f5a688",
+      "after": "bd6c2f8519bf343ff17df734ec36987dc36f0796140616be2be085e937f5a688",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/aggregate_performance_stability_summary.csv",
+      "reference": "artifacts/results/aggregate_performance_stability_summary.csv",
+      "before": "49f36bc161a91719e397ea0eaeb5f775fa4b68e87844c345df3721a2c4d0b266",
+      "after": "49f36bc161a91719e397ea0eaeb5f775fa4b68e87844c345df3721a2c4d0b266",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/main_results_table.csv",
+      "reference": "artifacts/results/main_results_table.csv",
+      "before": "c91dad5bf0295b033f236a01d9e71071822d20386a809dfeb383877a775696e8",
+      "after": "c91dad5bf0295b033f236a01d9e71071822d20386a809dfeb383877a775696e8",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/logistic_regression_individual_stability.csv",
+      "reference": "artifacts/results/logistic_regression_individual_stability.csv",
+      "before": "c9dcc649c6a58a9c2cf15e3d8cd93fe27dad930ae4d351d641832b8cdcb356fe",
+      "after": "c9dcc649c6a58a9c2cf15e3d8cd93fe27dad930ae4d351d641832b8cdcb356fe",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/prevalence_individual_stability.csv",
+      "reference": "artifacts/results/prevalence_individual_stability.csv",
+      "before": "7402a990c351d69dba64b20316579a7ed6b2f945be6ba161f7ab3a0e9c00287e",
+      "after": "7402a990c351d69dba64b20316579a7ed6b2f945be6ba161f7ab3a0e9c00287e",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/cross_procedure_individual_comparison.csv",
+      "reference": "artifacts/results/cross_procedure_individual_comparison.csv",
+      "before": "5be962a9d9a1f35b3e2a6d8255be12eb596c71de5e9012a1b1d10648643844d0",
+      "after": "5be962a9d9a1f35b3e2a6d8255be12eb596c71de5e9012a1b1d10648643844d0",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/random_forest_individual_stability.csv",
+      "reference": "artifacts/results/random_forest_individual_stability.csv",
+      "before": "8e08a85d228db67547f197659c0daf4f0a7a7e3a2d498e05597a0b4b824bdeab",
+      "after": "8e08a85d228db67547f197659c0daf4f0a7a7e3a2d498e05597a0b4b824bdeab",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/diagnostics/logistic_regression_fit_diagnostics.csv",
+      "reference": "artifacts/diagnostics/logistic_regression_fit_diagnostics.csv",
+      "before": "e2640131c2c32a716c9c68aa46023a1a34718634ad08bd45d5b00c40cf2f9882",
+      "after": "e2640131c2c32a716c9c68aa46023a1a34718634ad08bd45d5b00c40cf2f9882",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/predictions/logistic_regression_oos_predictions.csv",
+      "reference": "artifacts/predictions/logistic_regression_oos_predictions.csv",
+      "before": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "after": "0fc7a02fac51239682d613b95bdf20499c8e91bd5cf9b736155da8119c1f26f5",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/predictions/prevalence_oos_predictions.csv",
+      "reference": "artifacts/predictions/prevalence_oos_predictions.csv",
+      "before": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "after": "273ac9e864790524d6902ab6d51d66eb62a56efb17edc237e36a6419460ba98c",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/quantile_method_sensitivity.csv",
+      "reference": "artifacts/results/quantile_method_sensitivity.csv",
+      "before": "9903a29980adcab801562f4814086ebb93a06f570401e235ad280010feba79ab",
+      "after": "9903a29980adcab801562f4814086ebb93a06f570401e235ad280010feba79ab",
+      "identical": true
+    },
+    {
+      "artifact": "artifacts/results/quantile_method_membership_sensitivity.csv",
+      "reference": "artifacts/results/quantile_method_membership_sensitivity.csv",
+      "before": "7d310c73d9e8052113e6dbdb48b09d0801f10ade2d88d88dc49b4baab47d0e23",
+      "after": "7d310c73d9e8052113e6dbdb48b09d0801f10ade2d88d88dc49b4baab47d0e23",
+      "identical": true
+    }
+  ],
+  "wall_seconds": 1254.8764538764954,
+  "primary_before": [
+    {
+      "procedure": "Prevalence-only control",
+      "mean_auc": "0.5",
+      "sd_auc": "0.0",
+      "mean_brier": "0.2337738358769459",
+      "sd_brier": "2.803736533363884e-17",
+      "median_W": "0.00219780219780219",
+      "P90_W": "0.00219780219780219"
+    },
+    {
+      "procedure": "Logistic Regression",
+      "mean_auc": "0.9945560253699788",
+      "sd_auc": "0.0012989152875897596",
+      "mean_brier": "0.020547257795615344",
+      "sd_brier": "0.001676794818571691",
+      "median_W": "0.001003938059742554",
+      "P90_W": "0.07262021934736318"
+    },
+    {
+      "procedure": "Random Forest",
+      "mean_auc": "0.9906401955602537",
+      "sd_auc": "0.0009240946632887024",
+      "mean_brier": "0.03169631534215729",
+      "sd_brier": "0.0010077788286968698",
+      "median_W": "0.01045000000000007",
+      "P90_W": "0.10785750000000002"
+    }
+  ],
+  "primary_after": [
+    {
+      "procedure": "Prevalence-only control",
+      "mean_auc": "0.5",
+      "sd_auc": "0.0",
+      "mean_brier": "0.2337738358769459",
+      "sd_brier": "2.803736533363884e-17",
+      "median_W": "0.00219780219780219",
+      "P90_W": "0.00219780219780219"
+    },
+    {
+      "procedure": "Logistic Regression",
+      "mean_auc": "0.9945560253699788",
+      "sd_auc": "0.0012989152875897596",
+      "mean_brier": "0.020547257795615344",
+      "sd_brier": "0.001676794818571691",
+      "median_W": "0.001003938059742554",
+      "P90_W": "0.07262021934736318"
+    },
+    {
+      "procedure": "Random Forest",
+      "mean_auc": "0.9906401955602537",
+      "sd_auc": "0.0009240946632887024",
+      "mean_brier": "0.03169631534215729",
+      "sd_brier": "0.0010077788286968698",
+      "median_W": "0.01045000000000007",
+      "P90_W": "0.10785750000000002"
+    }
+  ]
+}

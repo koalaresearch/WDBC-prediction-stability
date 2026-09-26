@@ -1,0 +1,6 @@
+method,lr_shared_with_linear,lr_overlap_with_linear,rf_shared_with_linear,rf_overlap_with_linear
+linear,57,1.0,57,1.0
+nearest,57,1.0,55,0.9649122807017544
+lower,57,1.0,55,0.9649122807017544
+higher,57,1.0,56,0.9824561403508771
+midpoint,57,1.0,56,0.9824561403508771
