@@ -29,13 +29,13 @@ The primary objectives are to characterize:
 
 Individual prediction stability is summarized using
 
-\[
+$$
 W_i = Q_{0.90}(p_{ir}) - Q_{0.10}(p_{ir}),
-\]
+$$
 
-where \(p_{ir}\) is the genuine out-of-sample predicted probability assigned to observation \(i\) during redevelopment repetition \(r\).
+where $p_{ir}$ is the genuine out-of-sample predicted probability assigned to observation $i$ during redevelopment repetition $r$.
 
-\(W_i\) therefore describes the central 80% spread of the probabilities assigned to the same fixed observation across repeated redevelopment.
+$W_i$ therefore describes the central 80% spread of the probabilities assigned to the same fixed observation across repeated redevelopment.
 
 The study is **descriptive and methodological**. It is not intended to optimize predictive accuracy, develop a clinical classifier, identify biomarkers, or establish clinical validity.
 
@@ -47,15 +47,7 @@ A prediction procedure can show little variation in aggregate performance across
 
 In other words,
 
-\[
-\text{stable aggregate performance}
-\]
-
-does not logically imply
-
-\[
-\text{stable predictions for every observation}.
-\]
+> **Stable aggregate performance does not logically imply stable predictions for every observation.**
 
 The distinction matters because many biomedical ML evaluations stop at aggregate performance. A procedure may appear reproducible when judged by ROC-AUC or Brier score while the probability assigned to a particular case remains sensitive to which observations happened to be available for model development.
 
@@ -85,15 +77,15 @@ The frozen analysis dataset contains:
 
 The outcome is explicitly recoded as
 
-\[
+$$
 Y = 1 \quad \text{malignant}
-\]
+$$
 
 and
 
-\[
+$$
 Y = 0 \quad \text{benign}.
-\]
+$$
 
 All 30 predefined predictors are retained.
 
@@ -118,19 +110,13 @@ For each repetition:
 - every observation receives one genuine out-of-sample predicted probability;
 - the same fold assignments are used for all learning procedures.
 
-Across 50 repetitions, each observation therefore receives exactly
-
-\[
-50
-\]
-
-genuine out-of-sample predicted probabilities per procedure.
+Across 50 repetitions, each observation therefore receives exactly 50 genuine out-of-sample predicted probabilities per procedure.
 
 This yields
 
-\[
+$$
 569 \times 50 = 28{,}450
-\]
+$$
 
 out-of-sample predictions for each learning procedure.
 
@@ -191,9 +177,9 @@ No feature selection or hyperparameter tuning is performed.
 
 The full analysis comprises 250 fitted Logistic Regression models:
 
-\[
+$$
 50 \text{ repetitions} \times 5 \text{ folds}.
-\]
+$$
 
 Optimizer diagnostics are retained for all fits.
 
@@ -225,9 +211,9 @@ The diagnostic began at 2,000 trees and escalated only if the prespecified crite
 
 The criterion was:
 
-\[
+$$
 P90(\text{seed-induced prediction SD}) \leq 0.005.
-\]
+$$
 
 The observed diagnostic values were:
 
@@ -258,14 +244,14 @@ This escalation was part of the prespecified diagnostic logic; it was not chosen
 
 ## Primary individual-level estimand
 
-For observation \(i\), the primary prediction-stability measure is:
+For observation $i$, the primary prediction-stability measure is:
 
-\[
+$$
 W_i =
 Q_{0.90}(p_{ir})
 -
 Q_{0.10}(p_{ir}).
-\]
+$$
 
 This is termed the:
 
@@ -283,7 +269,7 @@ For each observation, the analysis also retains:
 - prediction variance across repetitions;
 - number of genuine out-of-sample predictions.
 
-\(W_i\) is **not** interpreted as:
+$W_i$ is **not** interpreted as:
 
 - a confidence interval;
 - a prediction interval;
@@ -305,12 +291,12 @@ For each repetition, the five held-out folds are reconstructed into one complete
 
 The Brier score is then calculated across the complete out-of-sample vector:
 
-\[
+$$
 B_r =
 \frac{1}{569}
 \sum_{i=1}^{569}
 (y_i-p_{ir})^2.
-\]
+$$
 
 This produces one Brier score per redevelopment repetition.
 
@@ -322,20 +308,20 @@ ROC-AUC is calculated independently within each held-out fold.
 
 The five fold-specific AUC values within a repetition are then combined using positive-negative pair weights:
 
-\[
+$$
 w_{rk}=n_{+,rk}n_{-,rk},
-\]
+$$
 
 giving
 
-\[
+$$
 AUC_r =
 \frac{
 \sum_k w_{rk}AUC_{rk}
 }{
 \sum_k w_{rk}
 }.
-\]
+$$
 
 This avoids treating rankings produced by different fold-specific fitted models as though they came from a single common model.
 
@@ -351,7 +337,7 @@ Accordingly:
 
 - folds are not treated as independent observations;
 - repetitions are not interpreted as newly recruited cohorts;
-- the \(569 \times 50\) stored predictions are not analyzed as independent patient observations;
+- the $569 \times 50$ stored predictions are not analyzed as independent patient observations;
 - P10–P90 ranges are not labeled confidence intervals;
 - conventional hypothesis tests across CV repetitions are not part of the primary analysis.
 
@@ -385,7 +371,7 @@ These values are descriptive. They are not used to declare one learning procedur
 
 The observation-level resampling-width distributions were:
 
-| Procedure | Median \(W_i\) | P90 \(W_i\) | P95 \(W_i\) | P99 \(W_i\) | Maximum \(W_i\) |
+| Procedure | Median $W_i$ | P90 $W_i$ | P95 $W_i$ | P99 $W_i$ | Maximum $W_i$ |
 |---|---:|---:|---:|---:|---:|
 | Prevalence control | 0.002198 | 0.002198 | 0.002198 | 0.002198 | 0.002198 |
 | Logistic Regression | 0.001004 | 0.072620 | 0.157334 | 0.271392 | 0.851826 |
@@ -409,25 +395,25 @@ The cross-procedure comparison was conducted after the primary procedure-specifi
 
 Across the 569 observations, Logistic Regression and Random Forest resampling widths were positively rank-correlated:
 
-\[
+$$
 \rho_{\mathrm{Spearman}} = 0.728.
-\]
+$$
 
 This indicates that observations that were relatively sensitive to redevelopment under one procedure also tended, to a substantial degree, to be relatively sensitive under the other.
 
 However, the magnitude of instability was not identical across procedures.
 
-Random Forest produced a larger \(W_i\) than Logistic Regression for:
+Random Forest produced a larger $W_i$ than Logistic Regression for:
 
-\[
+$$
 463/569 = 81.4\%
-\]
+$$
 
 of observations.
 
 Conversely, the largest Logistic Regression widths were more extreme than the largest Random Forest widths.
 
-Among the 57 observations in the highest 10% of \(W_i\) for each procedure:
+Among the 57 observations in the highest 10% of $W_i$ for each procedure:
 
 - 32 observations were shared;
 - 56.1% of the Logistic Regression upper-tail set also appeared in the Random Forest upper-tail set;
@@ -447,7 +433,7 @@ Several secondary checks were used to determine whether the main descriptive pat
 
 For Logistic Regression, Monte Carlo approximation error of the empirical width distribution was assessed by repeatedly resampling subsets of the 50 repetitions.
 
-For the median \(W_i\):
+For the median $W_i$:
 
 ```text
 Estimate: 0.001004
@@ -456,7 +442,7 @@ MC SE:    0.000036
 0.000931 to 0.001068
 ```
 
-For the P90 of \(W_i\):
+For the P90 of $W_i$:
 
 ```text
 Estimate: 0.072620
@@ -473,12 +459,12 @@ This diagnostic was designed to assess numerical approximation from using 50 rep
 
 The stability of the highest-instability 10% was evaluated by repeatedly estimating the top-57 set using subsets of the 50 redevelopment repetitions.
 
-At \(m=40\) retained repetitions:
+At $m=40$ retained repetitions:
 
-- all 57 full-analysis Logistic Regression upper-tail observations had membership frequency \(\geq 0.80\);
-- 54 of 57 had membership frequency \(\geq 0.90\);
-- 46 of 57 Random Forest upper-tail observations had membership frequency \(\geq 0.80\);
-- 41 of 57 had membership frequency \(\geq 0.90\).
+- all 57 full-analysis Logistic Regression upper-tail observations had membership frequency $\geq 0.80$;
+- 54 of 57 had membership frequency $\geq 0.90$;
+- 46 of 57 Random Forest upper-tail observations had membership frequency $\geq 0.80$;
+- 41 of 57 had membership frequency $\geq 0.90$.
 
 The cross-procedure Jaccard overlap remained centered near the full-analysis value under these subsampling checks.
 
@@ -486,7 +472,7 @@ The cross-procedure Jaccard overlap remained centered near the full-analysis val
 
 ### Quantile-definition sensitivity
 
-The primary \(W_i\) definition uses the linear quantile convention.
+The primary $W_i$ definition uses the linear quantile convention.
 
 Sensitivity analyses repeated the cross-procedure upper-tail comparison using:
 
@@ -504,7 +490,7 @@ Across all five conventions:
 
 The Logistic Regression top-57 set was unchanged across methods. Random Forest showed only one or two membership substitutions depending on the quantile convention.
 
-The rank-57/rank-58 boundaries were also checked for numerical indistinguishability at tolerance \(10^{-12}\); none was observed.
+The rank-57/rank-58 boundaries were also checked for numerical indistinguishability at tolerance $10^{-12}$; none was observed.
 
 The main upper-tail comparison is therefore not an artifact of one specific quantile interpolation convention.
 
@@ -550,7 +536,7 @@ artifacts/figures/cross_procedure_resampling_width.png
 artifacts/figures/cross_procedure_resampling_width.pdf
 ```
 
-This exploratory figure compares Logistic Regression and Random Forest \(W_i\) values observation by observation.
+This exploratory figure compares Logistic Regression and Random Forest $W_i$ values observation by observation.
 
 ---
 
@@ -564,7 +550,7 @@ The Random Forest specification, finite-forest diagnostic, primary estimands, ag
 
 Subsequent analyses examining:
 
-- cross-procedure \(W_i\) association;
+- cross-procedure $W_i$ association;
 - upper-tail overlap;
 - top-decile membership stability;
 - quantile-method sensitivity;
@@ -865,7 +851,7 @@ Within the observed WDBC dataset and the specified redevelopment process, the re
 
 4. **The magnitude and shape of redevelopment sensitivity depend in part on the learning procedure.**
 
-5. **The main upper-tail comparison is not strongly dependent on the specific quantile interpolation convention used to define \(W_i\).**
+5. **The main upper-tail comparison is not strongly dependent on the specific quantile interpolation convention used to define $W_i$.**
 
 These conclusions apply to the observed experiment.
 
