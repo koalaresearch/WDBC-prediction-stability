@@ -12,6 +12,26 @@ The aim is not to build a better breast-cancer classifier. It is to examine a na
 
 ---
 
+## Results at a glance
+
+**Design:** 50 repetitions of stratified 5-fold cross-validation, yielding 50 genuinely out-of-sample predictions per observation and procedure (28,450 per procedure). **Final Random Forest:** 8,000 trees, selected by the prespecified 2,000 → 4,000 → 8,000 finite-forest precision rule, not by predictive performance. These results describe redevelopment sensitivity within WDBC, not clinical risk uncertainty.
+
+**Aggregate performance across repetitions** (primary Figure 2):
+
+![ROC-AUC and Brier score across redevelopment repetitions](artifacts/figures/aggregate_performance_stability.png)
+
+**Individual prediction widths** (primary Figure 3): the scatter shows each observation's resampling width against its median out-of-sample predicted probability; it is not a histogram of widths.
+
+![Individual resampling widths versus median predicted probabilities](artifacts/figures/individual_prediction_stability.png)
+
+**Agreement between procedures** (exploratory Supplementary Figure S1):
+
+![Individual resampling widths under LR versus RF](artifacts/figures/cross_procedure_resampling_width.png)
+
+The experimental-design schematic (Figure 1) and PDF versions remain available under [artifacts/figures](artifacts/figures/).
+
+---
+
 ## Overview
 
 Biomedical machine-learning studies are commonly summarized using population-level quantities such as ROC-AUC, accuracy, sensitivity, specificity, or Brier score. These measures are important, but they answer questions about average predictive behavior across a dataset.
@@ -223,7 +243,7 @@ The observed diagnostic values were:
 | 4,000 | 0.001141 | 0.005394 | 0.007312 | 0.010564 |
 | 8,000 | 0.000631 | 0.003893 | 0.004655 | 0.006756 |
 
-The criterion was not met at 2,000 or 4,000 trees and was met at 8,000 trees.
+The criterion was not met at 2,000 or 4,000 trees and was met at 8,000 trees. The `n_estimators = 2000` recorded in [the frozen operational protocol](protocol/analysis_plan_v1.md) is the **starting specification**; Section 14 of that same protocol authorizes escalation. It is not a conflicting claim about the final model.
 
 The final primary Random Forest therefore uses:
 
@@ -386,6 +406,8 @@ Instead, the distribution was heterogeneous: a subset of observations received m
 The most extreme Logistic Regression case reached a resampling width of approximately 0.85, whereas the maximum Random Forest width was approximately 0.35.
 
 These extreme values are descriptive properties of this experiment and are not interpreted as patient-level uncertainty estimates.
+
+**Extreme-case traceability:** the largest Logistic Regression width belongs to `WDBC_038` (P10 = 0.042433, P90 = 0.894260, width = 0.851826); the largest Random Forest width belongs to `WDBC_191` (P10 = 0.051762, P90 = 0.399525, width = 0.347763). Their IDs and widths appear in the model-specific `artifacts/results/*_individual_stability.csv` tables and the paired [cross-procedure comparison](artifacts/results/cross_procedure_individual_comparison.csv). These values use rounded displays; the source CSVs retain full precision.
 
 ---
 
@@ -765,6 +787,12 @@ The canonical script reproduces the primary computational pipeline, including:
 - deterministic result artifacts.
 
 The notebook remains the reference for the full narrative analysis and the later robustness/exploratory analyses.
+
+### Evidence from a clean execution
+
+The [2026-09-26 notebook reproducibility audit](metadata/notebook_cleanup_20260926/AUDIT.md) records **Restart Kernel + Run All** in an isolated working copy: 94 non-empty code cells executed in sequence, all analysis assertions passed, and 29 analysis artifacts regenerated from an initially empty output directory. Deterministic CSVs, including the 28,450-row prediction files, matched byte-for-byte; all four PNG figures were byte-identical. Regenerated PDFs differed in date metadata only, and runtime timing diagnostics were not treated as deterministic.
+
+**Scope distinction:** `python scripts/run_wdbc_prediction_stability.py` reproduces the canonical primary predictions, metrics and result files, but does **not** render the figures or regenerate the later exploratory analyses. The full notebook is the documented route for those outputs. The audit above provides evidence of a clean notebook execution; it does not imply that a new full rerun was performed for this README revision.
 
 ---
 
